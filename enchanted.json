@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "enchantedbag-2adaf",
+  "private_key_id": "5fc400a0101ea9b611b72811b0c59b470262c8d5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCVw50CDdi1pBZJ\n0TgRMB6v4dj8sBkNhIpoJIabpQi9oOAmPmAMLW0BtVXo2ODh9FFnsfqtzB6WIzmd\nom2Uf8TKTSvweyFidSJP0/oZxy/6M0taPJb2Fr+II5tKlCa5DwEVdIpWBERf+JyZ\n6V9pQq4iynnYFLf+I4Tkte5zXgVDhVv8SWyacnIIUcrKK8tkMODHHDYc7hc+iFxT\nv7stlNWy/bh/UOsAdviEe+p81dullLcGKmL4/DzhDhRmG0KRl6sEtNAqbPJXCeWL\nlx7QwwEbgSBSrWs0eu3hv1cHaufoFx+qwTBvFUXWZTdDD/SlkjihL3e2Xx3ghenY\nWWWASqaXAgMBAAECggEAQTYOcT0HPjxnKhhMMgvCaPJN8eVZ2015mNRCupYXYr6g\nq3ZgixziiKplcICzFyAzrBPO5AtrzBMlfNKjpVQnI7GLruhmhoEbgif6kGvvo6Hf\nLzkPwLLyDjz22vf8jnsOjUGUFNVB0ool4kzAa0yKF4MTn/eRkDr2HEJtxFVNtHK7\nrxBwHWIy6c9Rhj4fayQRU8HM3vtG0blq9N1NK+5Kx6KOQaWeUOKgeEHLf50U1FHk\nYzVtvVIL5oeJnSJQZ+Pnz9B72HP+aU5ObTkE46vmZEDREVG2E3sUlmNgoXOnHLcs\nZmdls1rHJg9BQj+GQAYwoZ2cWoOFwJ6zyEpQ9w8IDQKBgQDTeCKEHTjXV6vm0cVI\n3nGF5PPHJN69huU2XDkqETj7BPUjPCo00ccNig8lwgumzvMMx5UGMTqyfMvKCzEx\nXpj9uR5chOT9xuCQiqNTX8oYi+CpTfyXjmGPy+Xlt/7OfX0SV34pN0zjUpcpbPQa\nY5d7SJi9QuEHmNR4bzSHyQhubQKBgQC1TRUmBcquGUB7848sfjUfJbeXTMfLmo9t\nsjtJYZ6WXLDVotrIHqphLkQGSATi0VdUaMsihmwhaaareAMmT39OKkfEFdlZocBm\nqtO49HUI34Lrrz1hXIkndPktX+iKGzzPr15aUpsrzo+SqRS6yYJFiBQzdsEsjJhV\nit+7x6F2kwKBgBuPM4heOpMt9NQ/EGP/wXG+tdqFPpYap3KfMEAAQJnOOphd9e4u\nTK/CB1lXYadanyhSNmS5M7ohM3ngXYfemTev0XojQ6ijK48K0mBCQpdSW3QVGs8x\nmhtgalS21vlYN12Vk3aRo26Yy+R1M5bg1dQWUPmRZrxTuZT8gS8VDwk9AoGBAKJu\neTAjqD7q6Nckk3WtbTKGvEGVzLshsrb5JBzOlSLp0JTW32TD9Ko0pUVraNU98Rvy\n92vrOx2EZorhbxD30HrbbojDeoPPY22YRzBB9EkK12UJD9kW6tqq9kQs1U5GsOjx\nmXsa32MUIZWoXqYqu8hH7rFdCB09qY2aanD2njZ5AoGAC64eCI5pIaBBdkQM5cme\nWTEcGQ0No1UHTpvw8UiUzD+8IlOHKBgXpmsL2V7xm5O6K88Z4C/DTChN/4YhYN1f\nnBRvxWHHNcKsmCkVIQt+iZEVLhcRYwJBD5I5kXdKdgfZEKxLGhnZsGgmUK3CMP3v\n2nWHtHxE1t4Cz+ahJOw63tQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@enchantedbag-2adaf.iam.gserviceaccount.com",
+  "client_id": "100144361036131090374",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40enchantedbag-2adaf.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
