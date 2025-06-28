@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MuggleProof Luggage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Baskervville:ital@0;1&family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contactus.css') }}">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <!-- Navigation Menu -->
+        <nav class="menu">
+          <div class="menuboxes active"><a href="/">Home</a></div>
+          <div class="menuboxes"><a href="/ContactUs">Contact Us</a></div>
+          <div class="menuboxes"><a href="#">Upcoming</a></div>
+          <div class="menuboxes"><a href="/yourPurchases">Purchases</a></div>
+        </nav>
+
+        <!-- Title Section -->
+        <div class="header-container">
+          <h1 class="title">MuggleProof Luggage</h1>
+          <p class="subtitle">More Than A Bag, It's Travelling Magic</p>
+        </div>
+
+        <!-- Slider Navigation -->
+        <div class="chevron">
+          <img src="{{ url_for('static', filename='images/right-chevron.png') }}" alt="right-chevron" class="arrow-left">
+          <img src="{{ url_for('static', filename='images/right-chevron.png') }}" alt="right-chevron" class="arrow-right">
+        </div>
+
+        <!-- Slider Dots -->
+        <div class="circles">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </header>
+      <main>
+        <p class="Contact_Title">Need to Cast a Message?</p>
+
+        <div class="contact_container">
+          <!-- Contact Information Card -->
+          <div class="contact_card">
+            <h2 class="card_title">Magical Ways to Reach Us</h2>
+
+            <div class="contact_details">
+              <div class="contact_item">
+                <div class="contact_icon">📍</div>
+                <div class="contact_info">
+                  <h3>Our Location</h3>
+                  <p>Platform 9¾, King's Cross Station, London</p>
+                </div>
+              </div>
+
+              <div class="contact_item">
+                <div class="contact_icon">✉️</div>
+                <div class="contact_info">
+                  <h3>Owl Post</h3>
+                  <p>support@muggleproof.co</p>
+                </div>
+              </div>
+
+              <div class="contact_item">
+                <div class="contact_icon">📞</div>
+                <div class="contact_info">
+                  <h3>Enchanted Telephone</h3>
+                  <p>+44 123 456 789</p>
+                </div>
+              </div>
+
+              <div class="contact_item">
+                <div class="contact_icon">⏰</div>
+                <div class="contact_info">
+                  <h3>Operating Hours</h3>
+                  <p>9:00 AM - 6:00 PM (GMT) Monday to Friday</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social_connect">
+              <h3>Connect With Our Wizarding Network</h3>
+              <div class="social_icons">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="Linked-In">
+                <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram">
+                <img src="facebook.png" alt="Facebook" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="form">
+            <h2 class="form_title">Send Us an Owl</h2>
+            <p class="form_description">
+              Have a question, request, or magical inquiry? Drop us a message
+              below, and we'll get back to you faster than a Nimbus 2000!
+            </p>
+
+            <form>
+              <div class="form_row">
+                <div class="form_group">
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your wizarding name..."
+                    required
+                  />
+                </div>
+
+                <div class="form_group">
+                  <label for="email">Your Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your magical mail ID..."
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form_group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="What's this message about?"
+                />
+              </div>
+
+              <div class="form_group">
+                <label for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Share your thoughts, spells, or secrets..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form_group checkbox_group">
+                <input type="checkbox" id="newsletter" name="newsletter" />
+                <label for="newsletter"
+                  >Subscribe to our owl post newsletter for magical updates and
+                  special offers</label
+                >
+              </div>
+
+              <button type="submit" class="submit_btn">
+                🪄 Cast the Spell
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="faq_section">
+          <h2 class="faq_title">Frequently Asked Questions</h2>
+          <div class="faq_container">
+            <div class="faq_item">
+              <h3>How does the tracking spell work?</h3>
+              <p>
+                Our proprietary GPS tracking system works worldwide, even in
+                areas with poor reception. Access your luggage location through
+                our mobile app anytime, anywhere.
+              </p>
+            </div>
+
+            <div class="faq_item">
+              <h3>What if I forget my password?</h3>
+              <p>
+                No need for memory potions! Just click "Forgot Password" on our
+                login page and follow the instructions sent to your registered
+                email.
+              </p>
+            </div>
+
+            <div class="faq_item">
+              <h3>Is the security charm TSA-approved?</h3>
+              <p>
+                Absolutely! All MuggleProof Luggage meets international security
+                standards while maintaining our magical protection features.
+              </p>
+            </div>
+
+            <div class="faq_item">
+              <h3>How long does shipping take?</h3>
+              <p>
+                Standard delivery takes 3-5 business days. For those in a hurry,
+                our Express Owl delivery gets your luggage to you within 48
+                hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-container">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p class="footer-text">Platform 9¾, King's Cross Station, London</p>
+            <p class="footer-text">Email: support@muggleproof.co</p>
+            <p class="footer-text">Phone: +44 123 456 789</p>
+
+            <!-- Social Media Links -->
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="Linked-In">
+              </a>
+              <a href="#" class="social-link">
+                <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram">
+              </a>
+              <a href="#" class="social-link">
+                <img src="facebook.png" alt="Facebook" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="quick-links">
+            <h3 class="footer-heading">Helpful Resources</h3>
+            <ul class="footer-list">
+              <li>
+                <span class="highlight">FAQs—</span>"Got Questions? We've Got
+                Spells."
+              </li>
+              <li>
+                <span class="highlight">User Guide—</span>"Master Your Magical
+                Luggage."
+              </li>
+              <li>
+                <span class="highlight">Warranty & Repairs—</span>"For When
+                Magic Fizzles Out."
+              </li>
+              <li>
+                <span class="highlight">Shipping Info—</span>"We Deliver Faster
+                Than Owls."
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="copyright">
+          <p>ⓒ MuggleProof Luggage | All Rights Reserved</p>
+        </div>
+      </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+  </body>
+</html>

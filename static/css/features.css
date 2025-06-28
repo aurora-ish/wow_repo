@@ -1,0 +1,836 @@
+/*                      || RESET                           */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  /*                      || GLOBAL STYLES                       */
+  body {
+    background-image: linear-gradient(
+      0deg,
+      #0a0517,
+      #1a0942,
+      #3a1d6e,
+      #6a3cb3,
+      #9369d9,
+      #6a3cb3,
+      #3a1d6e,
+      #1a0942,
+      #0a0517
+    );
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    color: #9369d9;
+  }
+  
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  /*                      || HEADER STYLES                       */
+  /* Menu Navigation */
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 4.75rem 5.881rem 0;
+    gap: 1rem;
+  }
+  
+  .menuboxes {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 50px;
+    width: 13.813rem;
+    height: 2.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+    background-color: rgba(51, 51, 51, 0.34);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .menuboxes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: all 0.5s ease;
+  }
+  
+  .menuboxes:hover::before {
+    left: 100%;
+  }
+  
+  .menuboxes:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .menuboxes.active {
+    background-color: rgba(147, 105, 217, 0.5);
+    border-color: rgba(147, 105, 217, 0.8);
+    box-shadow: 0 0 15px rgba(147, 105, 217, 0.3);
+  }
+  
+  /* Title Section */
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 6.5rem;
+    margin-left: 5.063rem;
+    margin-bottom: 3rem;
+  }
+  
+  .title {
+    font-size: 4rem;
+    transform: scaleY(1.1);
+    letter-spacing: 0.4rem;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .title::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    background: linear-gradient(90deg, #9369d9, transparent);
+    bottom: -10px;
+    left: 0;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: #fff;
+    padding-left: 0.3rem;
+    margin-top: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /*                      || HOUSE BANNER STYLES                       */
+  .house-banner {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 0 5rem 3rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .house-banner h2 {
+    font-family: "Cinzel", serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .house-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .house-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    width: 120px;
+  }
+  
+  .house-option img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 0.8rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .house-option span {
+    font-family: "Marcellus", serif;
+    font-size: 1.2rem;
+  }
+  
+  .house-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .house-option:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* House-specific styles */
+  .house-option[data-house="gryffindor"] img {
+    background-color: #740001;
+  }
+  
+  .house-option[data-house="slytherin"] img {
+    background-color: #1a472a;
+  }
+  
+  .house-option[data-house="ravenclaw"] img {
+    background-color: #0e1a40;
+  }
+  
+  .house-option[data-house="hufflepuff"] img {
+    background-color: #ecb939;
+  }
+  
+  .house-option.active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .house-option.active img {
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* House-theme variations */
+  body.gryffindor-theme {
+    background-image: linear-gradient(
+      0deg,
+      #0a0517,
+      #3b0000,
+      #740001,
+      #ae0001,
+      #eeba30,
+      #ae0001,
+      #740001,
+      #3b0000,
+      #0a0517
+    );
+  }
+  
+  body.slytherin-theme {
+    background-image: linear-gradient(
+      0deg,
+      #0a0517,
+      #0d2818,
+      #1a472a,
+      #2a623d,
+      #aaaaaa,
+      #2a623d,
+      #1a472a,
+      #0d2818,
+      #0a0517
+    );
+  }
+  
+  body.ravenclaw-theme {
+    background-image: linear-gradient(
+      0deg,
+      #0a0517,
+      #0e1a40,
+      #1a34b8,
+      #2541d1,
+      #d0d5f6,
+      #2541d1,
+      #1a34b8,
+      #0e1a40,
+      #0a0517
+    );
+  }
+  
+  body.hufflepuff-theme {
+    background-image: linear-gradient(
+      0deg,
+      #171205,
+      #332505,
+      #e3a000,
+      #ffba0d,
+      #fffbea,
+      #ffba0d,
+      #e3a000,
+      #332505,
+      #171205
+    );
+  }
+  
+  /*                      || DASHBOARD STYLES                       */
+  .dashboard {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 0 5rem 4rem;
+  }
+  
+  .dashboard-panel {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .panel-title {
+    font-family: "Cinzel", serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .feature-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 0;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .feature-header {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+  }
+  
+  .feature-header h3 {
+    font-family: "Marcellus", serif;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .feature-content {
+    padding: 1.5rem;
+  }
+  
+  /* GPS Location Styles */
+  .status-indicator {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background-color: rgba(147, 105, 217, 0.3);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-family: "Mulish", sans-serif;
+  }
+  
+  .feature-text {
+    margin-bottom: 1.5rem;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .map-container {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .map-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .feature-btn {
+    background: linear-gradient(135deg, #3a1d6e 0%, #6a3cb3 100%);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-family: "Marcellus", serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .feature-btn:hover {
+    background: linear-gradient(135deg, #6a3cb3 0%, #9369d9 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 0.8rem;
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Follow Me Toggle Styles */
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.4s;
+    border-radius: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .toggle-slider {
+    background-color: #9369d9;
+  }
+  
+  input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+  }
+  
+  .status-text {
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-style: italic;
+  }
+  
+  /* Weight Monitor Styles */
+  .weight-indicator {
+    margin-bottom: 1rem;
+  }
+  
+  .weight-bar {
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .weight-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3a1d6e, #9369d9);
+    border-radius: 15px;
+    transition: width 0.5s ease;
+  }
+  
+  .weight-value {
+    text-align: right;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  
+  .weight-limits {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+  
+  /* Quote Card Styles */
+  .quote-card {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .quote-container {
+    position: relative;
+    padding: 1rem 1rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .quote-mark {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+    color: rgba(147, 105, 217, 0.3);
+    line-height: 1;
+  }
+  
+  .quote-text {
+    font-family: "Mulish", sans-serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .quote-author {
+    font-family: "Marcellus", serif;
+    text-align: right;
+    color: #9369d9;
+  }
+  
+  /* Form Styles for Password Updates */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-family: "Mulish", sans-serif;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #9369d9;
+    box-shadow: 0 0 10px rgba(147, 105, 217, 0.3);
+  }
+  
+  /* Sorting Hat Result Styles */
+  .reassign-house p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: "Mulish", sans-serif;
+  }
+  
+  .sorting-result {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Marcellus", serif;
+    font-size: 1.2rem;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .sorting-result.active {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .sorting-result.gryffindor {
+    background-color: rgba(174, 0, 1, 0.3);
+    border: 1px solid #ae0001;
+  }
+  
+  .sorting-result.slytherin {
+    background-color: rgba(26, 71, 42, 0.3);
+    border: 1px solid #1a472a;
+  }
+  
+  .sorting-result.ravenclaw {
+    background-color: rgba(14, 26, 64, 0.3);
+    border: 1px solid #0e1a40;
+  }
+  
+  .sorting-result.hufflepuff {
+    background-color: rgba(236, 185, 57, 0.3);
+    border: 1px solid #ecb939;
+  }
+  
+  /*                      || FOOTER STYLES                       */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .contact-info {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .footer-heading {
+    font-family: "Marcellus", serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+    color: beige;
+    position: relative;
+  }
+  
+  .footer-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 30px;
+    height: 2px;
+    background-color: #9369d9;
+  }
+  
+  .footer-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .social-link img {
+    width: 36px;
+    height: auto;
+    opacity: 2;
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:hover img {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+  .quick-links {
+    flex: 1;
+  }
+  
+  .footer-list {
+    list-style-type: none;
+  }
+  
+  .footer-list li {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .highlight {
+    font-weight: 450;
+    color: beige;
+  }
+  
+  .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Baskervville", serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.05rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .menu {
+      padding: 3rem 3rem 0;
+    }
+  
+    .header-container {
+      margin-left: 3rem;
+    }
+  
+    .house-banner,
+    .dashboard {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  
+    .footer-container {
+      padding: 3rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .menuboxes {
+      width: 10rem;
+      font-size: 1.2rem;
+    }
+  
+    .title {
+      font-size: 3.5rem;
+    }
+  
+    .dashboard {
+      flex-direction: column;
+    }
+  
+    .dashboard-panel {
+      width: 100%;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  
+    .contact-info {
+      padding-right: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 3rem 2rem 0;
+      gap: 0.8rem;
+    }
+  
+    .menuboxes {
+      width: 8rem;
+      height: 2.5rem;
+      font-size: 1rem;
+    }
+  
+    .header-container {
+      align-items: center;
+      margin-left: 0;
+      padding-top: 4rem;
+    }
+  
+    .title {
+      font-size: 3rem;
+      text-align: center;
+    }
+  
+    .house-banner,
+    .dashboard {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+  
+    .house-options {
+      gap: 0.5rem;
+    }
+  
+    .house-option {
+      width: 100px;
+    }
+  
+    .house-option img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .menuboxes {
+      width: 7rem;
+      height: 2.2rem;
+      font-size: 0.9rem;
+    }
+  
+    .title {
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    .house-banner {
+      padding: 1.5rem 1rem;
+    }
+  
+    .house-option {
+      width: 80px;
+    }
+  
+    .house-option img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .house-option span {
+      font-size: 0.9rem;
+    }
+  
+    .footer-text,
+    .footer-list li {
+      font-size: 1.1rem;
+    }
+  }

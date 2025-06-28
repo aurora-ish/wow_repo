@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MuggleProof Luggage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Baskervville:ital@0;1&family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+
+</head>
+
+  <body>
+    <div class="container">
+      <header>
+        <!-- Navigation Menu -->
+        <nav class="menu">
+          <div class="menuboxes active"><a href="/">Home</a></div>
+          <div class="menuboxes"><a href="/ContactUs">Contact Us</a></div>
+          <div class="menuboxes"><a href="#">Upcoming</a></div>
+          <div class="menuboxes"><a href="/yourPurchases">Purchases</a></div>
+        </nav>
+
+        <!-- Title Section -->
+        <div class="header-container">
+          <h1 class="title">MuggleProof Luggage</h1>
+          <p class="subtitle">More Than A Bag, It's Travelling Magic</p>
+        </div>
+
+        <!-- Slider Navigation -->
+        <div class="chevron">
+            <img src="{{ url_for('static', filename='images/right-chevron.png') }}" alt="right-chevron" class="arrow-left">
+
+            <img src="{{ url_for('static', filename='images/right-chevron.png') }}" alt="right-chevron" class="arrow-right">
+
+        </div>
+
+        <!-- Slider Dots -->
+        <div class="circles">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </header>
+      <main>
+        <!--                           ||TITLE                          -->
+        <p class="Home_Title">
+          Travel Smarter, Travel Safer — With a Touch of Magic
+        </p>
+
+        <!--                           ||CONTENT                          -->
+        <div class="main_content">
+          <!-- Feature Card -->
+          <div class="feature_card">
+            <h2 class="card_title">Enchanted Features</h2>
+
+            <div class="feature_content">
+              <p class="feature_intro">
+                At MuggleProof Luggage Co., we believe travel should feel
+                effortless — and maybe a little magical.
+              </p>
+
+              <div class="feature_items">
+                <div class="feature_item">
+                  <div class="feature_icon">🔮</div>
+                  <div class="feature_info">
+                    <h3>GPS Tracking</h3>
+                    <p>
+                      Know exactly where your bag is, anywhere in the world.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature_item">
+                  <div class="feature_icon">📱</div>
+                  <div class="feature_info">
+                    <h3>SMS Alerts</h3>
+                    <p>
+                      Instant notifications for unauthorized access attempts.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature_item">
+                  <div class="feature_icon">⚖️</div>
+                  <div class="feature_info">
+                    <h3>Built-in Weight Sensor</h3>
+                    <p>Avoid last-minute airport surprises and excess fees.</p>
+                  </div>
+                </div>
+
+                <div class="feature_item">
+                  <div class="feature_icon">🔋</div>
+                  <div class="feature_info">
+                    <h3>Power Bank</h3>
+                    <p>Built-in charging for your devices while on the go.</p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="feature_outro">
+                No more lost luggage. No more guessing games. Just smooth,
+                secure travel — powered by smart engineering and a sprinkle of
+                magic. Because with MuggleProof Luggage Co., your journey should
+                be as enchanting as your destination.
+              </p>
+            </div>
+          </div>
+
+          <!--                           ||FORM                           -->
+          <div class="login_card">
+            <h2 class="card_title">Log in to reveal your next adventure</h2>
+
+            <form class="login_form" action="/welcomeUser" method="POST">
+              <div class="form_group">
+                <label for="Username">🧙‍♂️ Username:</label>
+                <input
+                  type="text"
+                  id="Username"
+                  name="Username"
+                  placeholder="Enter your wizarding name..."
+                  required
+                />
+              </div>
+
+              <div class="form_group">
+                <label for="Password">🔐 Password:</label>
+                <input
+                  type="password"
+                  id="Password"
+                  name="Password"
+                  placeholder="Your secret spell..."
+                  required
+                />
+              </div>
+
+              <button type="submit" class="login_btn">🪄 Alohomora</button>
+
+              <div class="form_links">
+                <a href="#">Forgot Password?</a>
+                <a href="#">Create Account</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Product Showcase Section -->
+        <div class="product_showcase">
+          <h2 class="showcase_title">Our Magical Collection</h2>
+
+          <div class="product_cards">
+            <div class="product_card">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+                <!-- Background with magical gradient -->
+                <defs>
+                  <linearGradient
+                    id="backgroundGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#1a0942" />
+                    <stop offset="100%" stop-color="#3a1d6e" />
+                  </linearGradient>
+                  <linearGradient
+                    id="luggageGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#3a1d6e" />
+                    <stop offset="100%" stop-color="#6a3cb3" />
+                  </linearGradient>
+                  <radialGradient
+                    id="glowGradient"
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                    fx="50%"
+                    fy="50%"
+                  >
+                    <stop offset="0%" stop-color="#9369d9" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#9369d9" stop-opacity="0" />
+                  </radialGradient>
+                  <filter
+                    id="shadow"
+                    x="-20%"
+                    y="-20%"
+                    width="140%"
+                    height="140%"
+                  >
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="10" />
+                    <feOffset dx="0" dy="10" result="offsetblur" />
+                    <feComponentTransfer>
+                      <feFuncA type="linear" slope="0.3" />
+                    </feComponentTransfer>
+                    <feMerge>
+                      <feMergeNode />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Background -->
+                <rect
+                  width="800"
+                  height="600"
+                  fill="url(#backgroundGradient)"
+                />
+
+                <!-- Magical glow effect beneath luggage -->
+                <ellipse
+                  cx="400"
+                  cy="450"
+                  rx="200"
+                  ry="30"
+                  fill="url(#glowGradient)"
+                  opacity="0.7"
+                />
+
+                <!-- Main Luggage - Sleek and Modern Design -->
+                <g filter="url(#shadow)" transform="translate(0, -20)">
+                  <!-- Luggage body -->
+                  <rect
+                    x="250"
+                    y="280"
+                    width="300"
+                    height="400"
+                    rx="20"
+                    ry="20"
+                    fill="url(#luggageGradient)"
+                  />
+
+                  <!-- Luggage details -->
+                  <rect
+                    x="270"
+                    y="300"
+                    width="260"
+                    height="360"
+                    rx="15"
+                    ry="15"
+                    fill="#2a1155"
+                    stroke="#9369d9"
+                    stroke-width="2"
+                  />
+
+                  <!-- Handle -->
+                  <rect
+                    x="370"
+                    y="250"
+                    width="60"
+                    height="30"
+                    rx="10"
+                    ry="10"
+                    fill="#2a1155"
+                  />
+                  <rect
+                    x="390"
+                    y="200"
+                    width="20"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#2a1155"
+                  />
+
+                  <!-- Security features - glowing lock -->
+                  <circle
+                    cx="400"
+                    cy="370"
+                    r="15"
+                    fill="#000"
+                    stroke="#9369d9"
+                    stroke-width="2"
+                  />
+                  <circle cx="400" cy="370" r="8" fill="#9369d9">
+                    <animate
+                      attributeName="opacity"
+                      values="0.7;1;0.7"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+
+                  <!-- GPS tracking display -->
+                  <rect
+                    x="320"
+                    y="420"
+                    width="160"
+                    height="60"
+                    rx="5"
+                    ry="5"
+                    fill="#1a0942"
+                    stroke="#9369d9"
+                    stroke-width="1"
+                  />
+                  <rect
+                    x="330"
+                    y="430"
+                    width="140"
+                    height="40"
+                    rx="3"
+                    ry="3"
+                    fill="#0a0517"
+                  />
+                  <circle cx="350" cy="450" r="6" fill="#9369d9">
+                    <animate
+                      attributeName="opacity"
+                      values="0.6;1;0.6"
+                      dur="3s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  <line
+                    x1="365"
+                    y1="445"
+                    x2="400"
+                    y2="445"
+                    stroke="#9369d9"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="365"
+                    y1="455"
+                    x2="420"
+                    y2="455"
+                    stroke="#9369d9"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="440"
+                    y1="435"
+                    x2="440"
+                    y2="465"
+                    stroke="#9369d9"
+                    stroke-width="1"
+                  />
+                  <circle
+                    cx="440"
+                    cy="450"
+                    r="8"
+                    fill="none"
+                    stroke="#9369d9"
+                    stroke-width="1"
+                  >
+                    <animate
+                      attributeName="r"
+                      values="8;10;8"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+
+                  <!-- Weight sensor indicator -->
+                  <rect
+                    x="350"
+                    y="500"
+                    width="100"
+                    height="20"
+                    rx="5"
+                    ry="5"
+                    fill="#1a0942"
+                    stroke="#9369d9"
+                    stroke-width="1"
+                  />
+                  <rect
+                    x="360"
+                    y="505"
+                    width="50"
+                    height="10"
+                    rx="2"
+                    ry="2"
+                    fill="#9369d9"
+                    opacity="0.8"
+                  />
+                </g>
+
+                <!-- Subtle floating particles around luggage -->
+                <circle cx="300" cy="380" r="3" fill="#9369d9" opacity="0.6">
+                  <animate
+                    attributeName="cy"
+                    values="380;360;380"
+                    dur="5s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+                <circle cx="500" cy="400" r="2" fill="#9369d9" opacity="0.6">
+                  <animate
+                    attributeName="cy"
+                    values="400;380;400"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+                <circle cx="400" cy="320" r="2" fill="#9369d9" opacity="0.7">
+                  <animate
+                    attributeName="cy"
+                    values="320;300;320"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+              </svg>
+              <h3>The Nimbus Series</h3>
+              <p>
+                Lightweight travel companions with unmatched security features.
+              </p>
+              <button class="product_btn">Explore</button>
+            </div>
+
+            <div class="product_card">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+                <!-- Background with magical gradient -->
+                <defs>
+                  <linearGradient
+                    id="backgroundGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#1a0942" />
+                    <stop offset="100%" stop-color="#3a1d6e" />
+                  </linearGradient>
+                  <linearGradient
+                    id="luggageGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#6a3cb3" />
+                    <stop offset="100%" stop-color="#9369d9" />
+                  </linearGradient>
+                  <radialGradient
+                    id="glowGradient"
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                    fx="50%"
+                    fy="50%"
+                  >
+                    <stop offset="0%" stop-color="#9369d9" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#9369d9" stop-opacity="0" />
+                  </radialGradient>
+                  <filter
+                    id="shadow"
+                    x="-20%"
+                    y="-20%"
+                    width="140%"
+                    height="140%"
+                  >
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="10" />
+                    <feOffset dx="0" dy="10" result="offsetblur" />
+                    <feComponentTransfer>
+                      <feFuncA type="linear" slope="0.3" />
+                    </feComponentTransfer>
+                    <feMerge>
+                      <feMergeNode />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Background -->
+                <rect
+                  width="800"
+                  height="600"
+                  fill="url(#backgroundGradient)"
+                />
+
+                <!-- Magical glow effect beneath luggage -->
+                <ellipse
+                  cx="400"
+                  cy="450"
+                  rx="200"
+                  ry="30"
+                  fill="url(#glowGradient)"
+                  opacity="0.7"
+                />
+
+                <!-- Main Luggage - Large Suitcase -->
+                <g filter="url(#shadow)" transform="translate(0, -20)">
+                  <rect
+                    x="250"
+                    y="280"
+                    width="300"
+                    height="400"
+                    rx="20"
+                    ry="20"
+                    fill="url(#luggageGradient)"
+                  />
+
+                  <!-- Luggage details -->
+                  <rect
+                    x="270"
+                    y="300"
+                    width="260"
+                    height="360"
+                    rx="15"
+                    ry="15"
+                    fill="#2a1155"
+                    stroke="#9369d9"
+                    stroke-width="2"
+                  />
+
+                  <!-- Handle -->
+                  <rect
+                    x="370"
+                    y="250"
+                    width="60"
+                    height="30"
+                    rx="10"
+                    ry="10"
+                    fill="#2a1155"
+                  />
+                  <rect
+                    x="390"
+                    y="200"
+                    width="20"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#2a1155"
+                  />
+
+                  <!-- Battery indicator -->
+                  <rect
+                    x="320"
+                    y="420"
+                    width="160"
+                    height="60"
+                    rx="5"
+                    ry="5"
+                    fill="#1a0942"
+                    stroke="#9369d9"
+                    stroke-width="1"
+                  />
+                  <rect
+                    x="330"
+                    y="430"
+                    width="140"
+                    height="40"
+                    rx="3"
+                    ry="3"
+                    fill="#0a0517"
+                  />
+                  <rect
+                    x="340"
+                    y="440"
+                    width="120"
+                    height="20"
+                    rx="2"
+                    ry="2"
+                    fill="#9369d9"
+                  >
+                    <animate
+                      attributeName="width"
+                      values="120;80;120"
+                      dur="3s"
+                      repeatCount="indefinite"
+                    />
+                  </rect>
+
+                  <!-- Glowing power symbol -->
+                  <circle
+                    cx="400"
+                    cy="370"
+                    r="15"
+                    fill="#000"
+                    stroke="#9369d9"
+                    stroke-width="2"
+                  />
+                  <path d="M400 360 L410 380 L390 380 Z" fill="#9369d9">
+                    <animate
+                      attributeName="opacity"
+                      values="0.7;1;0.7"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </path>
+                </g>
+
+                <!-- Subtle floating particles around luggage -->
+                <circle cx="300" cy="380" r="3" fill="#9369d9" opacity="0.6">
+                  <animate
+                    attributeName="cy"
+                    values="380;360;380"
+                    dur="5s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+                <circle cx="500" cy="400" r="2" fill="#9369d9" opacity="0.6">
+                  <animate
+                    attributeName="cy"
+                    values="400;380;400"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+              </svg>
+              <h3>The Firebolt Collection</h3>
+              <p>
+                Premium luggage with extended battery life and extra capacity.
+              </p>
+              <button class="product_btn">Explore</button>
+            </div>
+
+            <div class="product_card">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+                <!-- Background with magical gradient -->
+                <defs>
+                  <linearGradient
+                    id="backgroundGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#1a0942" />
+                    <stop offset="100%" stop-color="#3a1d6e" />
+                  </linearGradient>
+                  <linearGradient
+                    id="luggageGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#3a1d6e" />
+                    <stop offset="100%" stop-color="#6a3cb3" />
+                  </linearGradient>
+                  <radialGradient
+                    id="glowGradient"
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                    fx="50%"
+                    fy="50%"
+                  >
+                    <stop offset="0%" stop-color="#9369d9" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#9369d9" stop-opacity="0" />
+                  </radialGradient>
+                  <filter
+                    id="shadow"
+                    x="-20%"
+                    y="-20%"
+                    width="140%"
+                    height="140%"
+                  >
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="10" />
+                    <feOffset dx="0" dy="10" result="offsetblur" />
+                    <feComponentTransfer>
+                      <feFuncA type="linear" slope="0.3" />
+                    </feComponentTransfer>
+                    <feMerge>
+                      <feMergeNode />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Background -->
+                <rect
+                  width="800"
+                  height="600"
+                  fill="url(#backgroundGradient)"
+                />
+
+                <!-- Magical glow effect beneath luggage -->
+                <ellipse
+                  cx="400"
+                  cy="450"
+                  rx="200"
+                  ry="30"
+                  fill="url(#glowGradient)"
+                  opacity="0.7"
+                />
+
+                <!-- Main Luggage - Compact Carry-on (Scaled Up) -->
+                <g filter="url(#shadow)" transform="translate(0, -20)">
+                  <!-- Luggage body -->
+                  <rect
+                    x="250"
+                    y="280"
+                    width="300"
+                    height="400"
+                    rx="20"
+                    ry="20"
+                    fill="url(#luggageGradient)"
+                  />
+
+                  <!-- Luggage details -->
+                  <rect
+                    x="270"
+                    y="300"
+                    width="260"
+                    height="360"
+                    rx="15"
+                    ry="15"
+                    fill="#2a1155"
+                    stroke="#9369d9"
+                    stroke-width="2"
+                  />
+
+                  <!-- Handle -->
+                  <rect
+                    x="370"
+                    y="250"
+                    width="60"
+                    height="30"
+                    rx="10"
+                    ry="10"
+                    fill="#2a1155"
+                  />
+                  <rect
+                    x="390"
+                    y="200"
+                    width="20"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#2a1155"
+                  />
+
+                  <!-- Power bank indicator -->
+                  <rect
+                    x="320"
+                    y="420"
+                    width="160"
+                    height="60"
+                    rx="5"
+                    ry="5"
+                    fill="#1a0942"
+                    stroke="#9369d9"
+                    stroke-width="1"
+                  />
+                  <circle cx="350" cy="450" r="8" fill="#9369d9">
+                    <animate
+                      attributeName="fill"
+                      values="#9369d9;#b69be3;#9369d9"
+                      dur="4s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  <rect
+                    x="340"
+                    y="440"
+                    width="120"
+                    height="10"
+                    rx="2"
+                    ry="2"
+                    fill="#9369d9"
+                    opacity="0.8"
+                  />
+                </g>
+
+                <!-- Subtle floating particles around luggage -->
+                <circle cx="300" cy="380" r="3" fill="#9369d9" opacity="0.6">
+                  <animate
+                    attributeName="cy"
+                    values="380;360;380"
+                    dur="5s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+                <circle cx="500" cy="400" r="2" fill="#9369d9" opacity="0.6">
+                  <animate
+                    attributeName="cy"
+                    values="400;380;400"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+                <circle cx="400" cy="320" r="2" fill="#9369d9" opacity="0.7">
+                  <animate
+                    attributeName="cy"
+                    values="320;300;320"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+              </svg>
+              <h3>The Thunderbolt Mini</h3>
+              <p>
+                Compact carry-ons with all the magic of their larger
+                counterparts.
+              </p>
+              <button class="product_btn">Explore</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="testimonials">
+          <h2 class="testimonial_title">What Our Wizards Say</h2>
+
+          <div class="testimonial_cards">
+            <div class="testimonial_card">
+              <div class="quote">"</div>
+              <p>
+                After losing my luggage twice last year, MuggleProof has been a
+                game-changer. I can see exactly where my bag is at all times!
+              </p>
+              <div class="testimonial_author">- Hermione G., London</div>
+            </div>
+
+            <div class="testimonial_card">
+              <div class="quote">"</div>
+              <p>
+                The weight sensor saved me from excess baggage fees three times
+                already. This luggage has paid for itself!
+              </p>
+              <div class="testimonial_author">
+                - Ronald W., Ottery St. Catchpole
+              </div>
+            </div>
+
+            <div class="testimonial_card">
+              <div class="quote">"</div>
+              <p>
+                I travel weekly for work, and I can honestly say this is the
+                most durable and smartest luggage I've ever owned.
+              </p>
+              <div class="testimonial_author">- Harry P., Godric's Hollow</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Status Section -->
+        <div class="ai-status-section" style="text-align:center; margin: 2em 0;">
+          <button id="aiStatusBtn" class="product_btn">Show Smart Suitcase AI Status</button>
+          <pre id="aiStatusOutput" style="background:#18122b; color:#fff; padding:1em; border-radius:8px; margin-top:1em; display:none;"></pre>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-container">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p class="footer-text">Platform 9¾, King's Cross Station, London</p>
+            <p class="footer-text">Email: support@muggleproof.co</p>
+            <p class="footer-text">Phone: +44 123 456 789</p>
+
+            <!-- Social Media Links -->
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="Linked-In">
+              </a>
+              <a href="#" class="social-link">
+                <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram">
+              </a>
+              <a href="#" class="social-link">
+                <img src="facebook.png" alt="Facebook" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="quick-links">
+            <h3 class="footer-heading">Helpful Resources</h3>
+            <ul class="footer-list">
+              <li>
+                <span class="highlight">FAQs—</span>"Got Questions? We've Got
+                Spells."
+              </li>
+              <li>
+                <span class="highlight">User Guide—</span>"Master Your Magical
+                Luggage."
+              </li>
+              <li>
+                <span class="highlight">Warranty & Repairs—</span>"For When
+                Magic Fizzles Out."
+              </li>
+              <li>
+                <span class="highlight">Shipping Info—</span>"We Deliver Faster
+                Than Owls."
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="copyright">
+          <p>ⓒ MuggleProof Luggage | All Rights Reserved</p>
+        </div>
+      </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/homepage.js') }}"></script>
+    <script>
+document.getElementById('aiStatusBtn').addEventListener('click', function() {
+  const output = document.getElementById('aiStatusOutput');
+  output.style.display = 'block';
+  output.textContent = 'Loading...';
+  fetch('/aiStatus')
+    .then(res => res.json())
+    .then(data => {
+      output.textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(err => {
+      output.textContent = 'Error fetching AI status.';
+    });
+});
+</script>
+  </body>
+</html>

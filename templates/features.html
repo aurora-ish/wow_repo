@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MuggleProof Luggage - Features</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Baskervville:ital@0;1&family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/features.css')}}">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <!-- Navigation Menu for all pages -->
+        <nav class="menu">
+          <div class="menuboxes"><a href="/">Home</a></div>
+          <div class="menuboxes"><a href="/ContactUs">Contact Us</a></div>
+          <div class="menuboxes active">
+            <a href="features.html">Features</a>
+          </div>
+          <div class="menuboxes">
+            <a href="/yourPurchases">Profile</a>
+          </div>
+        </nav>
+
+        <!-- Title Section -->
+        <div class="header-container">
+          <h1 class="title">MuggleProof Luggage</h1>
+          <p class="subtitle">Control Your Magical Companion</p>
+        </div>
+      </header>
+
+      <main>
+        <!-- House Selection Banner -->
+        <div class="house-banner" id="houseBanner">
+          <h2>Select Your Hogwarts House</h2>
+          <div class="house-options">
+            <div class="house-option" data-house="gryffindor">
+              <img src="{{ url_for('static', filename='images/g.png') }}" alt="Gryffindor Crest">
+              <span>Gryffindor</span>
+            </div>
+            <div class="house-option" data-house="slytherin">
+              <img src="{{ url_for('static', filename='images/s.png') }}" alt="Slytherin Crest">
+              <span>Slytherin</span>
+            </div>
+            <div class="house-option" data-house="ravenclaw">
+              <img src="{{ url_for('static', filename='images/r.png') }}" alt="Ravenclaw Crest">
+              <span>Ravenclaw</span>
+            </div>
+            <div class="house-option" data-house="hufflepuff">
+              <img src="{{ url_for('static', filename='images/h.png') }}" alt="Hufflepuff Crest">
+              <span>Hufflepuff</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Dashboard -->
+        <div class="dashboard">
+          <!-- Left Panel - Features -->
+          <div class="dashboard-panel">
+            <h2 class="panel-title">Luggage Controls</h2>
+
+            <!-- GPS Location -->
+            <div class="feature-card">
+              <div class="feature-header">
+                <div class="feature-icon"></div>
+                <h3>GPS Location</h3>
+              </div>
+              <div class="feature-content">
+                <div id="gpsStatus" class="status-indicator">Connecting...</div>
+                <div id="locationCoords" class="feature-text">
+                  Searching for your luggage...
+                </div>
+                <div id="map" class="map-container">
+                  <img src="/api/placeholder/320/200" alt="Map placeholder" />
+                </div>
+                <button id="refreshLocation" class="feature-btn">
+                  Refresh Location
+                </button>
+              </div>
+            </div>
+
+            <!-- Follow Me Feature -->
+            <div class="feature-card">
+              <div class="feature-header">
+                <div class="feature-icon"></div>
+                <h3>Follow Me</h3>
+              </div>
+              <div class="feature-content">
+                <div class="toggle-container">
+                  <span>Off</span>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="followToggle" />
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span>On</span>
+                </div>
+                <div id="followStatus" class="status-text">
+                  Your luggage is staying put
+                </div>
+              </div>
+            </div>
+
+            <!-- Weight Indicator -->
+            <div class="feature-card">
+              <div class="feature-header">
+                <div class="feature-icon"></div>
+                <h3>Weight Monitor</h3>
+              </div>
+              <div class="feature-content">
+                <div class="weight-indicator">
+                  <div class="weight-bar">
+                    <div
+                      id="weightFill"
+                      class="weight-fill"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                  <div id="weightValue" class="weight-value">12.4 kg</div>
+                </div>
+                <div class="weight-limits">
+                  <span>0 kg</span>
+                  <span>Max: 23 kg</span>
+                </div>
+                <div id="weightStatus" class="status-text">
+                  Weight within carry-on limits
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Panel - Extras -->
+          <div class="dashboard-panel">
+            <h2 class="panel-title">Magical Extras</h2>
+
+            <!-- Harry Potter Quote -->
+            <div class="feature-card quote-card">
+              <div class="feature-header">
+                <div class="feature-icon"></div>
+                <h3>Wizarding Wisdom</h3>
+              </div>
+              <div class="feature-content">
+                <div class="quote-container">
+                  <div class="quote-mark">"</div>
+                  <p id="quoteText" class="quote-text">
+                    Happiness can be found, even in the darkest of times, if one
+                    only remembers to turn on the light.
+                  </p>
+                  <div class="quote-author" id="quoteAuthor">
+                    — Albus Dumbledore
+                  </div>
+                </div>
+                <button id="newQuote" class="feature-btn">New Quote</button>
+              </div>
+            </div>
+
+            <!-- Security Settings -->
+            <div class="feature-card">
+              <div class="feature-header">
+                <div class="feature-icon"></div>
+                <h3>Security Settings</h3>
+              </div>
+              <div class="feature-content">
+                <div class="form-group">
+                  <label for="currentPassword">Current Password</label>
+                  <input
+                    type="password"
+                    id="currentPassword"
+                    placeholder="Enter current password"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="newPassword">New Password</label>
+                  <input
+                    type="password"
+                    id="newPassword"
+                    placeholder="Enter new password"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm new password"
+                  />
+                </div>
+                <button id="updatePassword" class="feature-btn">
+                  Update Password
+                </button>
+                <button id="resetPassword" class="feature-btn btn-secondary">
+                  Reset Password
+                </button>
+              </div>
+            </div>
+
+            <!-- Reassign House -->
+            <div class="feature-card">
+              <div class="feature-header">
+                <div class="feature-icon"></div>
+                <h3>Reassign House</h3>
+              </div>
+              <div class="feature-content reassign-house">
+                <p>
+                  Not sure about your house? Let the Sorting Hat decide again!
+                </p>
+                <button id="sortingHat" class="feature-btn">
+                  Consult the Sorting Hat
+                </button>
+                <div id="sortingResult" class="sorting-result"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-container">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p class="footer-text">Platform 9¾, King's Cross Station, London</p>
+            <p class="footer-text">Email: support@muggleproof.co</p>
+            <p class="footer-text">Phone: +44 123 456 789</p>
+
+            <!-- Social Media Links -->
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="Linked-In">
+              </a>
+              <a href="#" class="social-link">
+                <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram">
+              </a>
+              <a href="#" class="social-link">
+                <img src="facebook.png" alt="Facebook" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="quick-links">
+            <h3 class="footer-heading">Helpful Resources</h3>
+            <ul class="footer-list">
+              <li>
+                <span class="highlight">FAQs—</span>"Got Questions? We've Got
+                Spells."
+              </li>
+              <li>
+                <span class="highlight">User Guide—</span>"Master Your Magical
+                Luggage."
+              </li>
+              <li>
+                <span class="highlight">Warranty & Repairs—</span>"For When
+                Magic Fizzles Out."
+              </li>
+              <li>
+                <span class="highlight">Shipping Info—</span>"We Deliver Faster
+                Than Owls."
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="copyright">
+          <p>ⓒ MuggleProof Luggage | All Rights Reserved</p>
+        </div>
+      </footer>
+    </div>
+    <script src="{{url_for('static', filename='js/features.js')}}"></script>
+  </body>
+</html>

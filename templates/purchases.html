@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MuggleProof Luggage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Baskervville:ital@0;1&family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/purchases.css')}}">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <!-- Navigation Menu -->
+        <nav class="menu">
+          <div class="menuboxes active"><a href="/">Home</a></div>
+          <div class="menuboxes"><a href="/ContactUs">Contact Us</a></div>
+          <div class="menuboxes"><a href="#">Upcoming</a></div>
+          <div class="menuboxes"><a href="/yourPurchases">Purchases</a></div>
+        </nav>
+
+        <!-- Title Section -->
+        <div class="header-container">
+          <h1 class="title">MuggleProof Luggage</h1>
+          <p class="subtitle">More Than A Bag, It's Travelling Magic</p>
+        </div>
+
+        <!-- Slider Navigation -->
+        <div class="chevron">
+          <img src="{{ url_for('static', filename='images/right-chevron.png') }}" alt="right-chevron" class="arrow-left">
+          <img src="{{ url_for('static', filename='images/right-chevron.png') }}" alt="right-chevron" class="arrow-right">
+        </div>
+
+        <!-- Slider Dots -->
+        <div class="circles">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </header>
+      <main>
+        <h1 class="purchases-title">Enchanted Collections</h1>
+
+        <p class="purchases-subtitle">
+          Select Your Magical Companion for Every Journey
+        </p>
+
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="/muggleimages/"
+                alt="Premium Trunk"
+                class="product-img"
+              />
+              <div class="product-badge">Best Seller</div>
+            </div>
+            <h3 class="product-name">Hogwarts Express Trunk</h3>
+            <p class="product-description">
+              Our flagship smart trunk with enhanced security charms,
+              undetectable extension charm, and lightweight portability spell.
+            </p>
+            <div class="product-features">
+              <span class="feature">GPS Tracking</span>
+              <span class="feature">Fingerprint Lock</span>
+              <span class="feature">Weight Sensor</span>
+            </div>
+            <div class="product-price">
+              <span class="original-price">£399</span>
+              <span class="sale-price">£349</span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="/muggleimages/"
+                alt="Standard Suitcase"
+                class="product-img"
+              />
+            </div>
+            <h3 class="product-name">Ravenclaw Carry-On</h3>
+            <p class="product-description">
+              Compact and intelligent design with smart organization
+              compartments. Perfect for weekend getaways or business trips.
+            </p>
+            <div class="product-features">
+              <span class="feature">SMS Alerts</span>
+              <span class="feature">USB Charger</span>
+              <span class="feature">Water-Repellent</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">£249</span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/muggleimages/" alt="Deluxe Set" class="product-img" />
+              <div class="product-badge">New</div>
+            </div>
+            <h3 class="product-name">Gryffindor Adventure Set</h3>
+            <p class="product-description">
+              For the bold traveler. Includes our signature anti-theft backpack
+              with the premium trunk. Built for daring expeditions.
+            </p>
+            <div class="product-features">
+              <span class="feature">GPS Tracking</span>
+              <span class="feature">Expandable</span>
+              <span class="feature">Temperature Control</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">£499</span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="accessory-section">
+          <h2 class="accessory-title">Magical Accessories</h2>
+
+          <div class="accessory-grid">
+            <!-- Accessory 1 -->
+            <div class="accessory-card">
+              <div class="accessory-image">
+                <img src="/muggleimages/" alt="Luggage Tag" />
+              </div>
+              <div class="accessory-details">
+                <h4>Smart Luggage Tag</h4>
+                <p>Digital tag with location tracking</p>
+                <span class="accessory-price">£29</span>
+                <button class="accessory-button">Add</button>
+              </div>
+            </div>
+
+            <!-- Accessory 2 -->
+            <div class="accessory-card">
+              <div class="accessory-image">
+                <img src="/muggleimages/" alt="Packing Cubes" />
+              </div>
+              <div class="accessory-details">
+                <h4>Vanishing Packing Cubes</h4>
+                <p>Set of 4 compression organizers</p>
+                <span class="accessory-price">£35</span>
+                <button class="accessory-button">Add</button>
+              </div>
+            </div>
+
+            <!-- Accessory 3 -->
+            <div class="accessory-card">
+              <div class="accessory-image">
+                <img src="/muggleimages/" alt="Travel Pouch" />
+              </div>
+              <div class="accessory-details">
+                <h4>Bottomless Travel Pouch</h4>
+                <p>Holds more than physically possible</p>
+                <span class="accessory-price">£45</span>
+                <button class="accessory-button">Add</button>
+              </div>
+            </div>
+
+            <!-- Accessory 4 -->
+            <div class="accessory-card">
+              <div class="accessory-image">
+                <img src="/muggleimages/" alt="Smart Lock" />
+              </div>
+              <div class="accessory-details">
+                <h4>Alohomora-Proof Lock</h4>
+                <p>Biometric security system</p>
+                <span class="accessory-price">£39</span>
+                <button class="accessory-button">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dobby-figure">
+          <img src="dobby-removebg-preview.png"Dobby the House Elf" />
+          <figcaption class="dobby-caption">
+            Master, please give Dobby a suitcase... Dobby will be free!
+          </figcaption>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-container">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p class="footer-text">Platform 9¾, King's Cross Station, London</p>
+            <p class="footer-text">Email: support@muggleproof.co</p>
+            <p class="footer-text">Phone: +44 123 456 789</p>
+
+            <!-- Social Media Links -->
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="Linked-In">
+              </a>
+              <a href="#" class="social-link">
+                <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram">
+              </a>
+              <a href="#" class="social-link">
+                <img src="facebook.png" alt="Facebook" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="quick-links">
+            <h3 class="footer-heading">Helpful Resources</h3>
+            <ul class="footer-list">
+              <li>
+                <span class="highlight">FAQs—</span>"Got Questions? We've Got
+                Spells."
+              </li>
+              <li>
+                <span class="highlight">User Guide—</span>"Master Your Magical
+                Luggage."
+              </li>
+              <li>
+                <span class="highlight">Warranty & Repairs—</span>"For When
+                Magic Fizzles Out."
+              </li>
+              <li>
+                <span class="highlight">Shipping Info—</span>"We Deliver Faster
+                Than Owls."
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="copyright">
+          <p>ⓒ MuggleProof Luggage | All Rights Reserved</p>
+        </div>
+      </footer>
+    </div>
+    <script src = "{{url_for('static', filename = 'purchase.js')}}"></script>
+  </body>
+</html>

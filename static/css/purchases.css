@@ -1,0 +1,809 @@
+/*                      || RESET                           */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #d9d9d9;
+    color: #fff;
+  }
+  
+  /*                      || GLOBAL STYLES                       */
+  
+  body {
+    background-image: linear-gradient(
+      0deg,
+      #0a0517,
+      #1a0942,
+      #3a1d6e,
+      #6a3cb3,
+      #9369d9,
+      #6a3cb3,
+      #3a1d6e,
+      #1a0942,
+      #0a0517
+    );
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    color: #9369d9;
+  }
+  
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  /*                      || HEADER STYLES                       */
+  
+  /* Menu Navigation */
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 4.75rem 5.881rem 0;
+    gap: 1rem;
+  }
+  
+  .menuboxes {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 50px;
+    width: 13.813rem;
+    height: 2.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+    background-color: rgba(51, 51, 51, 0.34);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .menuboxes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: all 0.5s ease;
+  }
+  
+  .menuboxes:hover::before {
+    left: 100%;
+  }
+  
+  .menuboxes:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .menu .menuboxes:nth-child(4) {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Title Section */
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 6.5rem;
+    margin-left: 5.063rem;
+  }
+  
+  .title {
+    font-size: 4rem;
+    transform: scaleY(1.1);
+    letter-spacing: 0.4rem;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .title::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    background: linear-gradient(90deg, #9369d9, transparent);
+    bottom: -10px;
+    left: 0;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: #fff;
+    padding-left: 0.3rem;
+    margin-top: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Chevron Navigation */
+  .chevron {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .chevron img {
+    width: 3%;
+    height: auto;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .chevron img:hover {
+    opacity: 0.9;
+  }
+  
+  .arrow-right:hover {
+    transform: scale(1.1);
+  }
+  
+  .arrow-left {
+    transform: rotateZ(180deg);
+  }
+  
+  .arrow-left:hover {
+    transform: rotateZ(180deg) scale(1.1);
+  }
+  
+  /* Slider Dots */
+  .circles {
+    text-align: center;
+    padding-top: 3.813rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #fff;
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  }
+  
+  .dot:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /*                      || FOOTER STYLES                       */
+  
+  /* Footer Layout */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Contact Information Section */
+  .contact-info {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .footer-heading {
+    font-family: "Marcellus", serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+    color: beige;
+    position: relative;
+  }
+  
+  .footer-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 30px;
+    height: 2px;
+    background-color: #9369d9;
+  }
+  
+  .footer-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Social Media Links */
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .social-link img {
+    width: 2.3rem;
+    height: auto;
+    filter: invert(1);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:hover img {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+  /* Quick Links Section */
+  .quick-links {
+    flex: 1;
+  }
+  
+  .footer-list {
+    list-style-type: none;
+  }
+  
+  .footer-list li {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .highlight {
+    font-weight: 450;
+    color: beige;
+  }
+  
+  /* Copyright Bar */
+  .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Baskervville", serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.05rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .menu {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  
+    .header-container {
+      margin-left: 3rem;
+    }
+  
+    .footer-container {
+      padding: 3rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .menuboxes {
+      width: 10rem;
+      font-size: 1.2rem;
+    }
+  
+    .title {
+      font-size: 3.5rem;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  
+    .contact-info {
+      padding-right: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 3rem 2rem 0;
+      gap: 0.8rem;
+    }
+  
+    .menuboxes {
+      width: 8rem;
+      height: 2.5rem;
+      font-size: 1rem;
+    }
+  
+    .header-container {
+      align-items: center;
+      margin-left: 0;
+      padding-top: 4rem;
+    }
+  
+    .title {
+      font-size: 3rem;
+      text-align: center;
+    }
+  
+    .chevron img {
+      width: 5%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .menuboxes {
+      width: 7rem;
+      height: 2.2rem;
+      font-size: 0.9rem;
+    }
+  
+    .title {
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    .footer-text,
+    .footer-list li {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /*                      || PURCHASES MAIN CONTENT           */
+  /*                      || PURCHASES MAIN CONTENT           */
+  /*                      || PURCHASES MAIN CONTENT           */
+  
+  main {
+    padding: 2rem 5rem;
+  }
+  
+  .purchases-title {
+    font-family: "Playfair Display", serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 3rem 0 1rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .purchases-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #e0e0ff;
+  }
+  
+  /* Product Grid */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .product-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(147, 105, 217, 0.4);
+  }
+  
+  .product-image {
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .product-card:hover .product-img {
+    transform: scale(1.05);
+  }
+  
+  .product-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(to right, #6a3cb3, #9369d9);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .product-name {
+    font-family: "Cinzel", serif;
+    font-size: 1.6rem;
+    margin: 1.5rem 1.5rem 0.8rem;
+    color: #fff;
+  }
+  
+  .product-description {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    margin: 0 1.5rem 1.2rem;
+    color: #e0e0ff;
+    line-height: 1.5;
+  }
+  
+  .product-features {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin: 0 1.5rem 1.5rem;
+  }
+  
+  .feature {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-family: "Mulish", sans-serif;
+    font-size: 0.85rem;
+    color: #fff;
+  }
+  
+  .product-price {
+    margin: 0 1.5rem 1.2rem;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: #b3b3ff;
+    opacity: 0.7;
+    margin-right: 0.8rem;
+    font-size: 1.3rem;
+  }
+  
+  .sale-price,
+  .current-price {
+    color: #deb887;
+  }
+  
+  .add-to-cart {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    padding: 0.8rem;
+    background: linear-gradient(to right, #3a1d6e, #6a3cb3);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background: linear-gradient(to right, #6a3cb3, #9369d9);
+    transform: scale(1.05);
+  }
+  
+  /* Accessories Section */
+  .accessory-section {
+    margin: 5rem 0;
+    padding: 3rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .accessory-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #fff;
+  }
+  
+  .accessory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .accessory-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  
+  .accessory-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .accessory-image {
+    height: 150px;
+    overflow: hidden;
+  }
+  
+  .accessory-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .accessory-card:hover .accessory-image img {
+    transform: scale(1.1);
+  }
+  
+  .accessory-details {
+    padding: 1.2rem;
+  }
+  
+  .accessory-details h4 {
+    font-family: "Cinzel", serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  
+  .accessory-details p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #e0e0ff;
+    margin-bottom: 1rem;
+  }
+  
+  .accessory-price {
+    font-family: "Mulish", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #deb887;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .accessory-button {
+    padding: 0.5rem 1.2rem;
+    background: linear-gradient(to right, #3a1d6e, #6a3cb3);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .accessory-button:hover {
+    background: linear-gradient(to right, #6a3cb3, #9369d9);
+  }
+  
+  /* Dobby Figure */
+  .dobby-figure {
+    text-align: center;
+    margin: 5rem 0;
+    transform: scale(0.9);
+  }
+  
+  .dobby-figure img {
+    width: 50%;
+    max-width: 300px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+    transition: transform 0.5s ease;
+  }
+  
+  .dobby-figure:hover img {
+    transform: translateY(-10px);
+  }
+  
+  .dobby-caption {
+    margin-top: 0.3rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #deb887;
+    font-family: "Lora", serif;
+    font-size: 1.2rem;
+    border: 2px solid #aa7bc3;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(170, 123, 195, 0.6);
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .dobby-caption:hover {
+    transform: scale(1.05);
+    background-color: #170312;
+    color: #fff;
+  }
+  
+  /*                      || FOOTER                         */
+  /*                      || FOOTER                         */
+  /*                      || FOOTER                         */
+  
+  .footer {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /*                      || CONTACT                           */
+  .contact {
+    padding-top: 2.625rem;
+    margin-left: 3.25rem;
+    padding-bottom: 2rem;
+    padding-right: 28rem;
+  }
+  
+  .contact .title_C {
+    font-size: 1.6rem;
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .location {
+    padding-top: 0.8rem;
+    font-size: 1.25rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  /*                      || LOGOS                           */
+  .social {
+    padding-top: 1rem;
+    padding-bottom: 1.938rem;
+  }
+  
+  .social img {
+    width: 2.313rem;
+    height: auto;
+    filter: invert(1);
+  }
+  
+  /*                      || QUESTIONS                           */
+  .questions {
+    font-size: 1.25rem;
+    padding-top: 2.625rem;
+    margin-right: 3.25rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .semi {
+    font-weight: 450;
+  }
+  
+  .copyright {
+    border-top: #fff solid 0.7px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  
+    font-size: 1.2rem;
+    font-family: "Baskervville", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /*                  ||DESIGN            */
+  /*                  ||DESIGN            */
+  /*                  ||DESIGN            */
+  
+  /*                      || BODY BACKGROUND                         */
+  body {
+    background-image: linear-gradient(
+      0deg,
+      #0a0517,
+      #1a0942,
+      #3a1d6e,
+      #6a3cb3,
+      #9369d9,
+      #6a3cb3,
+      #3a1d6e,
+      #1a0942,
+      #0a0517
+    );
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  /*                      || HEADER TITLE                           */
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .accessory-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    main {
+      padding: 2rem;
+    }
+  
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .accessory-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .menu {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      flex-wrap: wrap;
+    }
+  
+    .header {
+      margin-left: 2rem;
+    }
+  
+    .title {
+      font-size: 3rem;
+    }
+  }

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MuggleProof Luggage - Sorting Hat Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Baskervville:ital@0;1&family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hat.css') }}">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <!-- Navigation Menu -->
+        <nav class="menu">
+          <div class="menuboxes"><a href="/">Home</a></div>
+          <div class="menuboxes"><a href="/ContactUs">Contact Us</a></div>
+          <div class="menuboxes"><a href="#">Upcoming</a></div>
+          <div class="menuboxes active">
+            <a href="/yourPurchases">Profile</a>
+          </div>
+        </nav>
+
+        <!-- Title Section -->
+        <div class="header-container">
+          <h1 class="title">MuggleProof Luggage</h1>
+          <p class="subtitle">Find Your Perfect Luggage Match</p>
+        </div>
+      </header>
+
+      <main>
+        <!-- Quiz Container -->
+        <div class="quiz-container">
+          <!-- Sorting Hat Section -->
+          <div class="sorting-hat">
+            <div class="hat-image">
+              <img src="{{ url_for('static', filename='images/sorting.png') }}" alt="Sorting Hat">
+            </div>
+            <h2 class="sorting-title">The Luggage Sorting Quiz</h2>
+            <p class="sorting-subtitle">
+              Answer the questions honestly, and we'll find your perfect magical
+              travel companion!
+            </p>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress" style="width: 20%"></div>
+            </div>
+            <div class="progress-text">Question 1/5</div>
+          </div>
+
+          <!-- Question Section -->
+          <div class="question-container">
+            <h3 class="question-text">
+              When packing for a journey, which approach describes you best?
+            </h3>
+
+            <!-- Options -->
+            <div class="options-container">
+              <div class="option">
+                <input type="radio" name="question1" id="option1" />
+                <label for="option1">
+                  <span class="checkmark"></span>
+                  <span class="option-text"
+                    >I plan everything meticulously weeks in advance</span
+                  >
+                </label>
+              </div>
+
+              <div class="option">
+                <input type="radio" name="question1" id="option2" />
+                <label for="option2">
+                  <span class="checkmark"></span>
+                  <span class="option-text"
+                    >I pack light and only bring essentials</span
+                  >
+                </label>
+              </div>
+
+              <div class="option">
+                <input type="radio" name="question1" id="option3" />
+                <label for="option3">
+                  <span class="checkmark"></span>
+                  <span class="option-text"
+                    >I bring everything I might possibly need, just in
+                    case</span
+                  >
+                </label>
+              </div>
+
+              <div class="option">
+                <input type="radio" name="question1" id="option4" />
+                <label for="option4">
+                  <span class="checkmark"></span>
+                  <span class="option-text"
+                    >I usually pack at the last minute but somehow make it
+                    work</span
+                  >
+                </label>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="quiz-navigation">
+              <button class="quiz-btn prev-btn" disabled>Previous</button>
+              <button class="quiz-btn next-btn">Next Question</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-container">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p class="footer-text">Platform 9¾, King's Cross Station, London</p>
+            <p class="footer-text">Email: support@muggleproof.co</p>
+            <p class="footer-text">Phone: +44 123 456 789</p>
+
+            <!-- Social Media Links -->
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="Linked-In">
+              </a>
+              <a href="#" class="social-link">
+                <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram">
+              </a>
+              <a href="#" class="social-link">
+                <img src="facebook.png" alt="Facebook" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="quick-links">
+            <h3 class="footer-heading">Helpful Resources</h3>
+            <ul class="footer-list">
+              <li>
+                <span class="highlight">FAQs—</span>"Got Questions? We've Got
+                Spells."
+              </li>
+              <li>
+                <span class="highlight">User Guide—</span>"Master Your Magical
+                Luggage."
+              </li>
+              <li>
+                <span class="highlight">Warranty & Repairs—</span>"For When
+                Magic Fizzles Out."
+              </li>
+              <li>
+                <span class="highlight">Shipping Info—</span>"We Deliver Faster
+                Than Owls."
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="copyright">
+          <p>ⓒ MuggleProof Luggage | All Rights Reserved</p>
+        </div>
+      </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+  </body>
+</html>
